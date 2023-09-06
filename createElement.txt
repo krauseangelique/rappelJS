@@ -1,0 +1,9 @@
+/*
+Les 4 étapes pour insérer un élément HTML sont les suivantes :
+
+Tout d'abord créer un nœud pour l'élément avec la méthode document.createElement().
+Ensuite créer un nœud pour son contenu avec la méthode document.createTextNode().
+Puis "prendre" le nœud élément et lui accrocher son nœud contenu en utilisant la méthode appendChild().
+Enfin "choisir" le nœud d'un élément HTML dans l'arbre où vous voulez accrocher ce qui constitue une nouvelle branche. Accrochez là en utilisant la méthode appendChild().
+
+*/
