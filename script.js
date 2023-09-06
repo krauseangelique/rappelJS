@@ -1,13 +1,16 @@
 // Votre console affichera beaucoup d'erreurs c'est tout à fait normal si vous suivez l'ordre synchrone des exercices à la fin vous ne devriez plus avoir d'erreur.
 
-// Exercice 1
+// Exercice 1 V
 // Insérez votre code ici
+const firstname = "Bubulle";
+const lastname = "XXXX";
 
 // Ne touchez pas à ceci
 document.querySelector("h1").textContent = `Bonjour ${firstname} ${lastname}`;
 
 // Exercice 2
 // Insérez votre code ici
+let age = Number(32);
 
 // Ne touchez pas à ceci
 document.querySelector(
@@ -17,10 +20,12 @@ document.querySelector(
 }`;
 // Exercice 3
 // Insérez votre code ici
+let year = Number(2023);
+const birthYear = Number(year - age);
 
 // Exercice 4
 // Insérez votre code ici
-
+let user = [firstname, lastname, age, year, birthYear];
 // Ne touchez pas à ceci
 user.forEach((infoUser) => {
   switch (infoUser) {
@@ -55,15 +60,31 @@ user.forEach((infoUser) => {
 // Exercice 5
 // Insérez votre code ici
 
+/* Merci Sara
+let colorLigthBlue = "lightblue";
+let colorPink = "pink";
+document.body.style.background = `linear-gradient(${colorPink}, ${colorLigthBlue})`;
+*/
+let backgroundColor = "crimson";
 // Ne touchez pas à ceci
 document.body.style.backgroundColor = backgroundColor;
 // Insérez votre réassignation de backgroundColor ici
+backgroundColor = "lightblue";
 
 document.body.style.backgroundColor = backgroundColor;
 
 // Exercice 6
 // Insérez votre code ici
-
+// Insérer une image
+let myImage = new Image(100, 200);
+let car = {
+  brand: "peogot",
+  modele: "403",
+  yearConstruct: 1956,
+  color: "lightblue",
+  image: myImage.src = "./Ressources/images/128.jpg",
+};
+console.log(car);
 // Ne touchez pas à ceci
 document.getElementById(
   "firstItem"
@@ -81,6 +102,9 @@ document.getElementById("car").src = car.image;
 
 // Exercice 7
 // Insérez votre code ici
+// const matches = document.querySelectorAll("p");
+const buttons = document.querySelectorAll("button");
+console.log(buttons);
 
 // Ne touche pas à ceci
 const catURL = [
