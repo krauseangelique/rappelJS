@@ -137,6 +137,7 @@ buttons.forEach((btn) => {
 // Exercice 8
 // Insérez votre code ici
 // Sélectionnez l'élément ayant l'ID "output" en utilisant getElementById() et insérez deux nouvelles balises HTML avec innerHTML. Vous aurez besoin d'une balise "p" avec un contenu de votre choix et d'une balise "img" avec la source suivante : https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png.
+
 let output = document.getElementById("output");
 console.log(output);
 output.innerHTML += `<p>Hello mon p </p>
@@ -184,47 +185,21 @@ const icons = [
   "shrimp-solid",
 ];
 
-/*
- const array1 = ['a', 'b', 'c'];
-
-array1.forEach((element) => console.log(element)); 
-*/
-icons.forEach((iconValue) => {
-  console.log(iconValue);
-
-});
-/*
-let chemin = "";
-chemin = iconValue[0];
-console.log(chemin);
-*/
-
 // Insérez votre code ici
 const logo = document.getElementById("logo");
 // Pour éviter de compter le nombre d'éléments de notre tableau, créez une variable contenant la longueur de votre tableau et soustrayez 1 (car l'index commence à 0).
 const indexIcons = (icons.length) -1;
 console.log(indexIcons);
 
-// Ensuite, créez une variable qui génère un chiffre aléatoire entre 0 et 8. N'oubliez pas d'utiliser la variable précédemment créée pour l'index.
-/*
-La classe Math contient toutes les méthodes liées au nombre dans le langage JavaScript. On peut générer un nombre aléatoire en JavaScript avec la méthode Math.rand() mais ce nombre est systématiquement compris entre 0 et 1. Il faut ensuite multiplier le nombre aléatoire généré par la différence entre les deux nombres qui sont les limites et ajouter 1. On obtient ainsi un nombre à virgule. La méthode Math.floor() va récupérer la partie entière de ce nombre. Après ce calcul, il ne reste plus qu'à ajouter le nombre inférieur de l'intervalle pour obtenir un nombre aléatoire compris dans l'intervalle.
-*/
-const min = 1;
-const max = 8;
-
-function entierAleatoire(min, max)
-{
- return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-//Utilisation
-//La variable contient un nombre aléatoire compris entre 1 et 8
-const entier = entierAleatoire(1, 8);
+const aleatoire = Math.round(Math.random()*indexIcons);
+console.log(aleatoire);
+// images/chemin tableau valeur du tableau via son index
+const iconURL = `./Ressources/images/${icons[aleatoire]}.svg`;
+// document.getElementById("myImg").src = "hackanm.gif"; https://www.w3schools.com/jsref/prop_img_src.asp, https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_img_src2
+//  <img id="logo" src="" alt="" /> la balise img dont l'id est logo va recevoir la source d'une image produite aléatoirement
+logo.src = iconURL;
 
 
-/*let variableCheminImage = `<img id="iconImage" src="./Ressources/images/${iconValue}.svg" alt="User's Icon" />`;
-console.log(variableCheminImage);
-*/
 
 // Exercice 11 : Optionnel
 /*
@@ -240,3 +215,54 @@ console.log(variableCheminImage);
     <img id="iconImage" src="" alt="User's Icon" />
 */
 // Insérez votre code ici
+
+/*
+Exercice 11
+Exercice optionnel
+
+Pour cet exercice, nous allons réutiliser le tableau de l'exercice 10.
+const icons = [
+  "cat-solid",
+  "dog-solid",
+  "dragon-solid",
+  "fish-solid",
+  "hippo-solid",
+  "horse-solid",
+  "otter-solid",
+  "paw-solid",
+  "shrimp-solid",
+];
+
+Cette fois, l'objectif est de permettre à l'utilisateur de choisir son icône.
+
+Dans le HTML, récupérez plusieurs éléments en utilisant la méthode de votre choix. Enregistrez les IDs "iconSelect" (qui permet à l'utilisateur de choisir dans un menu déroulant), "changeIcon" (qui permet de valider le choix) et "iconImage" (qui affichera l'icône sélectionnée).
+Créez une fonction et affichez un message avec console.log() pour vérifier son bon fonctionnement. N'oubliez pas de l'appeler ensuite 😉
+Sous votre fonction, ajoutez un gestionnaire d'événements de type "click". Devinez sur quel élément l'utilisateur doit cliquer pour déclencher votre fonction. Rappelez-vous que la méthode addEventListener prend deux paramètres : le type d'événement à écouter et la fonction à exécuter. Si vous aviez appelé votre fonction "normalement" à l'étape précédente, supprimez cet appel, car il ne sera pas nécessaire.
+Revenons à votre fonction. Vous souhaitez que l'utilisateur puisse choisir. Vous avez déjà effectué toutes vos sélections et appelé la fonction.
+Votre fonction n'accepte pas de paramètre.
+Créez une variable contenant la "value" de l'élément "iconSelect".
+Utilisez une condition "if" (sans le "else") basée sur la valeur de la variable créée à l'étape précédente.
+Si cette condition est vraie, créez une variable contenant le chemin/lien des images en utilisant la syntaxe des backticks. Intégrez votre variable contenant la valeur de votre sélection.
+Modifiez ensuite la source de votre icône en utilisant cette nouvelle variable.
+
+*/
+// Récupération du tableau de l'exercice 10
+
+// Récupération de plusieurs éléments HTML et enregistrer leur ID
+const iconSelect = document.getElementById("iconSelect");
+console.log(iconSelect);
+const changeIcon = document.getElementById("changeIcon");
+console.log(changeIcon);
+const iconImage = document.getElementById("iconImage");
+console.log(iconImage);
+
+// sous la fonction, ajout d'un gestionnaire d'event click
+// l'utilisateur doit cliquer sur le button changeIcon pour déclencher la fonction
+// dans la fonction créer une variable contenant la "value" de l'élément "iconSelect"
+function modifierIcon(){
+
+  changeIcon.addEventListener("click", () => {
+    
+  })
+
+}
