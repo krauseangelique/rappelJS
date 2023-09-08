@@ -214,6 +214,7 @@ logo.src = iconURL;
     </div>
     <img id="iconImage" src="" alt="User's Icon" />
 */
+
 // Insérez votre code ici
 
 /*
@@ -236,8 +237,37 @@ const icons = [
 Cette fois, l'objectif est de permettre à l'utilisateur de choisir son icône.
 
 Dans le HTML, récupérez plusieurs éléments en utilisant la méthode de votre choix. Enregistrez les IDs "iconSelect" (qui permet à l'utilisateur de choisir dans un menu déroulant), "changeIcon" (qui permet de valider le choix) et "iconImage" (qui affichera l'icône sélectionnée).
+*/
+
+const iconSelect = document.getElementById("iconSelect");
+console.log(iconSelect);
+const changeIcon = document.getElementById("changeIcon");
+console.log(changeIcon);
+const iconImage = document.getElementById("iconImage");
+console.log(iconImage);
+
+/*
 Créez une fonction et affichez un message avec console.log() pour vérifier son bon fonctionnement. N'oubliez pas de l'appeler ensuite 😉
-Sous votre fonction, ajoutez un gestionnaire d'événements de type "click". Devinez sur quel élément l'utilisateur doit cliquer pour déclencher votre fonction. Rappelez-vous que la méthode addEventListener prend deux paramètres : le type d'événement à écouter et la fonction à exécuter. Si vous aviez appelé votre fonction "normalement" à l'étape précédente, supprimez cet appel, car il ne sera pas nécessaire.
+*/
+// l'utilisateur doit cliquer sur le button changeIcon pour déclencher la fonction
+// dans la fonction créer une variable contenant la "value" de l'élément "iconSelect"
+function modifierIcon(){
+
+
+  changeIcon.addEventListener("click", () => {
+   
+ }) 
+
+
+}
+
+/*
+Sous votre fonction, ajoutez un gestionnaire d'événements de type "click". 
+
+Devinez sur quel élément l'utilisateur doit cliquer pour déclencher votre fonction. 
+
+Rappelez-vous que la méthode addEventListener prend deux paramètres : le type d'événement à écouter et la fonction à exécuter. Si vous aviez appelé votre fonction "normalement" à l'étape précédente, supprimez cet appel, car il ne sera pas nécessaire.
+
 Revenons à votre fonction. Vous souhaitez que l'utilisateur puisse choisir. Vous avez déjà effectué toutes vos sélections et appelé la fonction.
 Votre fonction n'accepte pas de paramètre.
 Créez une variable contenant la "value" de l'élément "iconSelect".
@@ -246,23 +276,4 @@ Si cette condition est vraie, créez une variable contenant le chemin/lien des i
 Modifiez ensuite la source de votre icône en utilisant cette nouvelle variable.
 
 */
-// Récupération du tableau de l'exercice 10
 
-// Récupération de plusieurs éléments HTML et enregistrer leur ID
-const iconSelect = document.getElementById("iconSelect");
-console.log(iconSelect);
-const changeIcon = document.getElementById("changeIcon");
-console.log(changeIcon);
-const iconImage = document.getElementById("iconImage");
-console.log(iconImage);
-
-// sous la fonction, ajout d'un gestionnaire d'event click
-// l'utilisateur doit cliquer sur le button changeIcon pour déclencher la fonction
-// dans la fonction créer une variable contenant la "value" de l'élément "iconSelect"
-function modifierIcon(){
-
-  changeIcon.addEventListener("click", () => {
-    
-  })
-
-}
