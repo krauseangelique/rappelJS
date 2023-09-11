@@ -197,6 +197,7 @@ console.log(aleatoire);
 const iconURL = `./Ressources/images/${icons[aleatoire]}.svg`;
 // document.getElementById("myImg").src = "hackanm.gif"; https://www.w3schools.com/jsref/prop_img_src.asp, https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_img_src2
 //  <img id="logo" src="" alt="" /> la balise img dont l'id est logo va recevoir la source d'une image produite aléatoirement
+// pour l'id logo qui est stocké dans la variable logo, je lui attribue l'icone url qui elle va chercher une image aléatoirement : const iconURL = `./Ressources/images/${icons[aleatoire]}.svg`;
 logo.src = iconURL;
 
 
@@ -252,14 +253,20 @@ Créez une fonction et affichez un message avec console.log() pour vérifier son
 // l'utilisateur doit cliquer sur le button changeIcon pour déclencher la fonction
 // dans la fonction créer une variable contenant la "value" de l'élément "iconSelect"
 function modifierIcon(){
-
-
-  changeIcon.addEventListener("click", () => {
-   
- }) 
-
-
+ // console.log("coucou");
+ const selectIcon = iconSelect.value;
+  // console.log(selectIcon);
+  
+  if (selectIcon) {
+    // aller chercher dans la source l'image correspondante au clic
+    iconImage.src = `./Ressources/images/${selectIcon}.svg`;
+    
+  }
 }
+
+changeIcon.addEventListener("click", () => {
+ modifierIcon();
+}) 
 
 /*
 Sous votre fonction, ajoutez un gestionnaire d'événements de type "click". 
